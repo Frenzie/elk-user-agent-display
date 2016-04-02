@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE package-info SYSTEM "http://www.elkarte.net/site/package-info">
+<package-info xmlns="http://www.elkarte.net/site/package-info" xmlns:elk="http://www.elkarte.net/">
+	<id>Frenzie:user-agent-display</id>
+	<name>User Agent Display</name>
+	<version>1.0</version>
+	<type>modification</type>
+
+	<install for="1.0 - 1.0.99">
+		<readme parsebbc="true">readme.txt</readme>
+		<require-file name="browsers.ini" destination="SOURCEDIR/addons/user_agent_display" />
+		<require-file name="operating-systems.ini" destination="SOURCEDIR/addons/user_agent_display" />
+		<require-file name="uad_hooks.php" destination="SOURCEDIR/addons/user_agent_display" />
+		<require-file name="user_agent_detect.php" destination="SOURCEDIR/addons/user_agent_display" />
+		<require-dir name="user_agent_display" destination="THEMEDIR/images" />
+		<require-file name="theme/UAD.english.php" destination="LANGUAGEDIR/english" />
+		<hook hook="integrate_general_mod_settings" file="SOURCEDIR/addons/user_agent_display/uad_hooks.php" function="UAD_integrate_general_mod_settings" />
+		<hook hook="integrate_before_create_post" file="SOURCEDIR/addons/user_agent_display/uad_hooks.php" function="UAD_integrate_before_create_post" />
+		<hook hook="integrate_load_permissions" file="SOURCEDIR/addons/user_agent_display/uad_hooks.php" function="UAD_integrate_load_permissions" />
+		<hook hook="integrate_message_query" file="SOURCEDIR/addons/user_agent_display/uad_hooks.php" function="UAD_integrate_message_query" />
+		<hook hook="integrate_prepare_display_context" file="SOURCEDIR/addons/user_agent_display/uad_hooks.php" function="UAD_integrate_prepare_display_context" />
+		<code>install.php</code>
+	</install>
+
+	<uninstall for="1.0 - 1.0.99">
+		<hook reverse="true" hook="integrate_general_mod_settings" file="SOURCEDIR/addons/user_agent_display/uad_hooks.php" function="UAD_integrate_general_mod_settings" />
+		<hook reverse="true" hook="integrate_before_create_post" file="SOURCEDIR/addons/user_agent_display/uad_hooks.php" function="UAD_integrate_before_create_post" />
+		<hook reverse="true" hook="integrate_load_permissions" file="SOURCEDIR/addons/user_agent_display/uad_hooks.php" function="UAD_integrate_load_permissions" />
+		<hook reverse="true" hook="integrate_message_query" file="SOURCEDIR/addons/user_agent_display/uad_hooks.php" function="UAD_integrate_message_query" />
+		<hook reverse="true" hook="integrate_prepare_display_context" file="SOURCEDIR/addons/user_agent_display/uad_hooks.php" function="UAD_integrate_prepare_display_context" />
+		<remove-file name="SOURCEDIR/addons/user_agent_display/browsers.ini" />
+		<remove-file name="SOURCEDIR/addons/user_agent_display/operating-systems.ini" />
+		<remove-file name="SOURCEDIR/addons/user_agent_display/uad_hooks.php" />
+		<remove-file name="SOURCEDIR/addons/user_agent_display/user_agent_detect.php" />
+		<remove-dir name="THEMEDIR/images/user_agent_display" />
+		<remove-file name="LANGUAGEDIR/english/UAD.english.php" />
+	</uninstall>
+
+</package-info>
