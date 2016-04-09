@@ -14,20 +14,20 @@
 		<require-file name="user_agent_detect.php" destination="SOURCEDIR/addons/user_agent_display" />
 		<require-dir name="user_agent_display" destination="THEMEDIR/images" />
 		<require-file name="theme/UAD.english.php" destination="LANGUAGEDIR/english" />
-		<hook hook="integrate_general_mod_settings" file="SOURCEDIR/addons/user_agent_display/uad_hooks.php" function="UAD_integrate_general_mod_settings" />
-		<hook hook="integrate_before_create_post" file="SOURCEDIR/addons/user_agent_display/uad_hooks.php" function="UAD_integrate_before_create_post" />
-		<hook hook="integrate_load_permissions" file="SOURCEDIR/addons/user_agent_display/uad_hooks.php" function="UAD_integrate_load_permissions" />
-		<hook hook="integrate_message_query" file="SOURCEDIR/addons/user_agent_display/uad_hooks.php" function="UAD_integrate_message_query" />
-		<hook hook="integrate_prepare_display_context" file="SOURCEDIR/addons/user_agent_display/uad_hooks.php" function="UAD_integrate_prepare_display_context" />
+		<hook hook="integrate_general_mod_settings" file="SOURCEDIR/addons/user_agent_display/uad_hooks.php" function="UAD_integrate::general_mod_settings" />
+		<hook hook="integrate_before_create_post" file="SOURCEDIR/addons/user_agent_display/uad_hooks.php" function="UAD_integrate::before_create_post" />
+		<hook hook="integrate_load_permissions" file="SOURCEDIR/addons/user_agent_display/uad_hooks.php" function="UAD_integrate::load_permissions" />
+		<hook hook="integrate_message_query" file="SOURCEDIR/addons/user_agent_display/uad_hooks.php" function="UAD_integrate::message_query" />
+		<hook hook="integrate_prepare_display_context" file="SOURCEDIR/addons/user_agent_display/uad_hooks.php" function="UAD_integrate::prepare_display_context" />
 		<code>install.php</code>
 	</install>
 
 	<uninstall for="1.0 - 1.0.99">
-		<hook reverse="true" hook="integrate_general_mod_settings" file="SOURCEDIR/addons/user_agent_display/uad_hooks.php" function="UAD_integrate_general_mod_settings" />
-		<hook reverse="true" hook="integrate_before_create_post" file="SOURCEDIR/addons/user_agent_display/uad_hooks.php" function="UAD_integrate_before_create_post" />
-		<hook reverse="true" hook="integrate_load_permissions" file="SOURCEDIR/addons/user_agent_display/uad_hooks.php" function="UAD_integrate_load_permissions" />
-		<hook reverse="true" hook="integrate_message_query" file="SOURCEDIR/addons/user_agent_display/uad_hooks.php" function="UAD_integrate_message_query" />
-		<hook reverse="true" hook="integrate_prepare_display_context" file="SOURCEDIR/addons/user_agent_display/uad_hooks.php" function="UAD_integrate_prepare_display_context" />
+		<hook reverse="true" hook="integrate_general_mod_settings" file="SOURCEDIR/addons/user_agent_display/uad_hooks.php" function="UAD_integrate::general_mod_settings" />
+		<hook reverse="true" hook="integrate_before_create_post" file="SOURCEDIR/addons/user_agent_display/uad_hooks.php" function="UAD_integrate::before_create_post" />
+		<hook reverse="true" hook="integrate_load_permissions" file="SOURCEDIR/addons/user_agent_display/uad_hooks.php" function="UAD_integrate::load_permissions" />
+		<hook reverse="true" hook="integrate_message_query" file="SOURCEDIR/addons/user_agent_display/uad_hooks.php" function="UAD_integrate:message_query" />
+		<hook reverse="true" hook="integrate_prepare_display_context" file="SOURCEDIR/addons/user_agent_display/uad_hooks.php" function="UAD_integrate::prepare_display_context" />
 		<remove-file name="SOURCEDIR/addons/user_agent_display/browsers.ini" />
 		<remove-file name="SOURCEDIR/addons/user_agent_display/operating-systems.ini" />
 		<remove-file name="SOURCEDIR/addons/user_agent_display/uad_hooks.php" />
