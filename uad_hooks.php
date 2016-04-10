@@ -128,7 +128,8 @@ class UAD_integrate
 		unset($output['member']['custom_fields']['uad_os']);
 
 		// Sanity checks
-		$no_browser; $no_os;
+		$no_browser = $no_os = NULL;
+
 		if (empty($ua_browser_icon_img) && empty($ua_browser))
 			$no_browser = TRUE;
 		if (empty($ua_os_icon_img) && empty($ua_os))
