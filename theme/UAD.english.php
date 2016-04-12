@@ -1,7 +1,6 @@
 <?php
 
 $txt['permissionname_view_uad'] = 'Display user agent';
-$txt['permissionhelp_view_uad'] = 'View detected OS and browser icons in user info next to posts.';
 
 $txt['UAD_location'] = 'User agent display location';
 $txt['UAD_bottom_user_info'] = 'Bottom of user info popup';
