@@ -107,8 +107,8 @@ class UAD_integrate
 		$uad_sep = !empty($user_agent) ? ' <span class="uad_sep">•</span> ' : NULL; // used for seperating between icons and user agent
 		$images_url = $settings['default_images_url'] . '/user_agent_display/icons/';
 
-		$ua_browser; $ua_browser_icon_url; $ua_browser_icon_img;
-		$ua_os; $ua_os_icon_url; $ua_os_icon_img;
+		$ua_browser = $ua_browser_icon_url = $ua_browser_icon_img = NULL;
+		$ua_os = $ua_os_icon_url = $ua_os_icon_img = NULL;
 
 		$ua_browser = !empty($message['ua_browser']) ? $message['ua_browser'] : NULL;
 		if (!empty($message['ua_browser_icon']))
