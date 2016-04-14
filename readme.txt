@@ -1,7 +1,7 @@
 [center][size=16pt][b]User Agent Display[/b][/size][/center]
 [hr]
 
-This modification displays the OS and browser used while posting based on the user agent string provided by the browser. Hovering the icons will display the full user agent string. This information is not changed when editing the post.
+This addon displays the OS and browser used while posting based on the user agent string provided by the browser. Hovering the icons will display the full user agent string. This information is not changed when editing the post.
 
 In the permissions area of the administration interface you can decide which membergroups are allowed to view this information.
 
